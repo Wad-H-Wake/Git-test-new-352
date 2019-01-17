@@ -14,8 +14,16 @@ namespace ConsoleApp1
             int guessAmt = 0;
             int randomNum = 0;
             int userNum = 0;
+            int lowBound = 0;
+            int highBound = 0;
+
+            Console.WriteLine("Select a lower bound:");
+            lowBound = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Select a upper bound:");
+            highBound = Convert.ToInt32(Console.ReadLine());
+
             Random rnd = new Random();
-            randomNum = rnd.Next(0, 100);
+            randomNum = rnd.Next(lowBound, highBound);
             Console.WriteLine("Guess a number between 0 and 100:");
             while (userNum != randomNum)
             {
